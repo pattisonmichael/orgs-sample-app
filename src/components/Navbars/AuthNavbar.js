@@ -76,6 +76,21 @@ export default function Navbar() {
                   >
                     Log In
                   </button>
+      <DropdownButton
+        as={ButtonGroup}
+        key={variant}
+        id={`dropdown-variants-Secondary`}
+        variant={variant.toLowerCase()}
+        title={variant}
+      >
+        <Dropdown.Item eventKey="1">Default</Dropdown.Item>
+<Dropdown.Divider />
+        <Dropdown.Item eventKey="2">Markant</Dropdown.Item>
+        <Dropdown.Item eventKey="3" active>
+          Active Item
+        </Dropdown.Item>
+       
+      </DropdownButton>
                 )}
               </li>
             </ul>
