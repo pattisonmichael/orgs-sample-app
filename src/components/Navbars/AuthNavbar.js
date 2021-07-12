@@ -1,6 +1,7 @@
 /*eslint-disable*/
 import React from "react";
-import DropdownButton from 'react-bootstrap/DropdownButton'
+import Dropdown from 'react-bootstrap/Dropdown';
+import DropdownButton from 'react-bootstrap/DropdownButton';
 import { Link } from "react-router-dom";
 import { useAuth0 } from "@auth0/auth0-react";
 
@@ -77,17 +78,16 @@ export default function Navbar() {
                   >
                     Log In
                   </button>
-     <Dropdown>
-  <Dropdown.Toggle variant="success" id="dropdown-basic">
-    Dropdown Button
-  </Dropdown.Toggle>
-
-  <Dropdown.Menu>
-    <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-    <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-    <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
-  </Dropdown.Menu>
-</Dropdown>
+<DropdownButton
+        as={ButtonGroup}
+        key="1"
+        id="dropdown-variants-Secondary"
+        variant="secondary"
+        title="Theme"
+      >
+        <Dropdown.Item eventKey="1">Default</Dropdown.Item>
+        <Dropdown.Item eventKey="2">Markant</Dropdown.Item>
+      </DropdownButton>
                 )}
               </li>
             </ul>
